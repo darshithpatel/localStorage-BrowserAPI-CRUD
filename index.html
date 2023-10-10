@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClientBook</title>
+    <link rel="icon" type="image/x-icon" href="favicon-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="main-navbar">
+      <div class="logo">Client<span class="logo-book">Book</span></div>
+
+      <div class="right">
+        <a href="#scrollToTable" class="listBtn">
+          List <ion-icon name="arrow-forward-outline"></ion-icon>
+        </a>
+        <a href="#scrollToForm" class="listBtn add">
+          Add <ion-icon name="person-add-outline"></ion-icon>
+        </a>
+      </div>
+    </div>
+
+    <!-- REGISTRATION SECTION-->
+    <section class="registration-section">
+      <div class="heading">
+        <span class="heading-text">
+          <ion-icon name="newspaper-outline"></ion-icon>
+          <p class="new-registration">New Registration</p></span
+        >
+      </div>
+
+      <div id="scrollToForm" class="form-class">
+        <div class="container">
+          <div class="content">
+            <form onsubmit="event.preventDefault();" autocomplete="off">
+              <div class="user-details">
+                <div class="input-box">
+                  <span class="details">First Name</span>
+                  <input
+                    type="text"
+                    placeholder="Your first name"
+                    name="firstName"
+                    id="firstName"
+                    required
+                  />
+                </div>
+                <div class="input-box">
+                  <span class="details">Last Name</span>
+                  <input
+                    type="text"
+                    placeholder="Your last name"
+                    name="lastName"
+                    id="lastName"
+                    required
+                  />
+                </div>
+                <div class="input-box">
+                  <span class="details">Age</span>
+                  <input
+                    type="number"
+                    placeholder="How old are you?"
+                    name="age"
+                    id="age"
+                    required
+                  />
+                </div>
+                <div class="input-box">
+                  <span class="details">Email</span>
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    name="eMail"
+                    id="eMail"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="gender-details">
+                <input type="radio" name="gender" id="dot-1" value="Male" />
+                <input type="radio" name="gender" id="dot-2" value="Female" />
+                <input type="radio" name="gender" id="dot-3" value="Other" />
+                <span class="gender-title">Gender</span>
+                <div class="category">
+                  <label for="dot-1">
+                    <span class="dot one"></span>
+                    <span class="gender">Male</span>
+                  </label>
+                  <label for="dot-2">
+                    <span class="dot two"></span>
+                    <span class="gender">Female</span>
+                  </label>
+                  <label for="dot-3">
+                    <span class="dot three"></span>
+                    <span class="gender">Other</span>
+                  </label>
+                </div>
+              </div>
+              <div class="button">
+                <button id="registerButton" onclick="addData()">
+                  Register
+                </button>
+                <button id="updateButton">Update</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- REGISTRATION SECTION OVER-->
+
+    <!-- TABLE SECTION -->
+    <section class="table-section" id="scrollToTable">
+      <div class="heading">
+        <span class="heading-text">
+          <ion-icon name="people-outline"></ion-icon>
+          <p class="new-registration">Client List</p></span
+        >
+      </div>
+      <table id="clientRows">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th class="action-th">Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+    <!-- TABLE SECTION OVER-->
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
